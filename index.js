@@ -1,4 +1,4 @@
-import implementation from "./implementation.js"
+import implementation from "./implementation.js";
 import { reduceTests } from "./tests.js";
 
 const args = [
@@ -32,6 +32,11 @@ const args = [
     (a, b) => a + b,
     null
   ],
+  [
+    Array.from({ length: 10 }, () => Math.floor(Math.random() * 10)),
+    (a, b) => a + b,
+    0
+  ]
 ];
 
 const results = reduceTests(implementation, args);
